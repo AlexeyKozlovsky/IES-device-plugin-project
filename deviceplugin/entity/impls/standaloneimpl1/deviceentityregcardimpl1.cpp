@@ -546,7 +546,7 @@ GetInnerStartWidthResponse DeviceEntityRegCardImpl1::getInnerStartWidth(GetInner
             uint32_t value_in_disc = 0;
             modbus::fromMsbLsb(reg_values[0], reg_values[1], value_in_disc);
 
-            uint64_t duration = (uint64_t) value_in_disc;
+            uint64_t duration = (uint64_t) value_in_disc * 25 + 100;
             response.result = duration;
         } else {
             // TODO: Потом сделать обработку ошибок.
