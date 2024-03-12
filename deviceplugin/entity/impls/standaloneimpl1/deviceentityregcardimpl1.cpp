@@ -557,3 +557,26 @@ GetInnerStartWidthResponse DeviceEntityRegCardImpl1::getInnerStartWidth(GetInner
 
     return response;
 }
+
+GetInnerStartEnabledStatusResponse
+DeviceEntityRegCardImpl1::getInnerStartEnabledStatus(GetInnerStartEnabledStatusRequest request) {
+
+    GetInnerStartEnabledStatusResponse response;
+
+    if (_modbus_wrapper != nullptr) {
+        uint16_t reg_value;
+        auto error_code = _modbus_wrapper->readHoldingRegister(6, reg_value);
+
+        if (error_code == SUCCESS) {
+
+            uint64_t status = reg_value % 2;
+            response.result = status;
+        } else {
+            // TODO: Потом сделать обработку ошибок.
+        }
+
+        response.error_code = error_code;
+    }
+
+    return response;
+}

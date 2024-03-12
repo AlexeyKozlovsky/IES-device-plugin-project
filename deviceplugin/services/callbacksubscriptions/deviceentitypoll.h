@@ -24,6 +24,8 @@ class DeviceEntityPoll: public IDeviceEntityPoll {
 
     void innerStartWidthPoll() override;
 
+    void innerStartEnabledStatusPoll() override;
+
     void SyncSFPStatusesPoll() override;
 
   void channelNamesPoll() override;

@@ -39,7 +39,10 @@ class DeviceEntityImpl: public DeviceEntity {
   GetChannelEnabledStatusResponse getChannelsEnabledStatus(GetChannelEnabledStatusRequest request) override;
   GetChannelInvertedStatusResponse getChannelsInvertedStatus(GetChannelInvertedStatusRequest request) override;
   GetChannelStartModeResponse getChannelsStartMode(GetChannelStartModeRequest request) override;
-  GetChannelStartSourceResponse getChannelsStartSource(GetChannelStartSourceRequest request) override;
+
+    GetInnerStartEnabledStatusResponse getInnerStartEnabledStatus(GetInnerStartEnabledStatusRequest request) override;
+
+    GetChannelStartSourceResponse getChannelsStartSource(GetChannelStartSourceRequest request) override;
 
     GetInnerStartWidthResponse getInnerStartWidth(GetInnerStartWidthRequest request) override;
 

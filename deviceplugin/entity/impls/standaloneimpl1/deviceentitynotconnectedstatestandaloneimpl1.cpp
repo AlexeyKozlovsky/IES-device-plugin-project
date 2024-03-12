@@ -77,3 +77,8 @@ GetInnerStartWidthResponse
 DeviceEntityNotConnectedStateStandaloneImpl1::getInnerStartWidth(GetInnerStartWidthRequest request) {
     return GetInnerStartWidthResponse();
 }
+
+GetInnerStartEnabledStatusResponse
+DeviceEntityNotConnectedStateStandaloneImpl1::getInnerStartEnabledStatus(GetInnerStartEnabledStatusRequest request) {
+    return GetInnerStartEnabledStatusResponse();
+}

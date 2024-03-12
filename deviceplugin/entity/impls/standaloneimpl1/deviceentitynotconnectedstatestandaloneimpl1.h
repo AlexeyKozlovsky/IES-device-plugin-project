@@ -13,7 +13,10 @@ class DeviceEntityNotConnectedStateStandaloneImpl1: public DeviceEntityState {
     GetSFPParametersResponse getSFPParameters(GetSFPParametersRequest request) override;
 
   int getChannelCount() override;
-  GetChannelDelayResponse getChannelsDelay(GetChannelDelayRequest request) override;
+
+    GetInnerStartEnabledStatusResponse getInnerStartEnabledStatus(GetInnerStartEnabledStatusRequest request) override;
+
+    GetChannelDelayResponse getChannelsDelay(GetChannelDelayRequest request) override;
   GetChannelWidthResponse getChannelsWidth(GetChannelWidthRequest request) override;
   GetChannelEnabledStatusResponse getChannelsEnabledStatus(GetChannelEnabledStatusRequest request) override;
   GetChannelInvertedStatusResponse getChannelsInvertedStatus(GetChannelInvertedStatusRequest request) override;

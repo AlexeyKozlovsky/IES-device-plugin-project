@@ -17,7 +17,10 @@ class DeviceEntityConnectedStateStandaloneImpl1: public DeviceEntityState {
     GetSyncModuleStatusesResponse getSyncModuleStatuses(GetSyncModuleStatusesRequest request) override;
   GetSFPParametersResponse getSFPParameters(GetSFPParametersRequest request) override;
   GetChannelWidthResponse getChannelsWidth(GetChannelWidthRequest request) override;
-  GetChannelEnabledStatusResponse getChannelsEnabledStatus(GetChannelEnabledStatusRequest request) override;
+
+    GetInnerStartEnabledStatusResponse getInnerStartEnabledStatus(GetInnerStartEnabledStatusRequest request) override;
+
+    GetChannelEnabledStatusResponse getChannelsEnabledStatus(GetChannelEnabledStatusRequest request) override;
   GetChannelInvertedStatusResponse getChannelsInvertedStatus(GetChannelInvertedStatusRequest request) override;
   GetChannelStartModeResponse getChannelsStartMode(GetChannelStartModeRequest request) override;
   GetChannelStartSourceResponse getChannelsStartSource(GetChannelStartSourceRequest request) override;

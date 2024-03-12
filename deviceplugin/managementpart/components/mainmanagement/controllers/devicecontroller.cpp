@@ -23,6 +23,11 @@ void DeviceController::setConnections() {
                            this, &DeviceController::innerStartWidthModelChangedSlot);
       }
 
+      auto inner_start_enabled_status_callback = _device_cb_factory->getInnerStartEnabledStatusCallback();
+      if (inner_start_enabled_status_callback != nullptr) {
+          QObject::connect(inner_start_enabled_status_callback.get(), &BoolValueCallback::statusChanged,
+                           this, &DeviceController::innerStartEnabledStatusModelChangedSlot);
+      }
 
     auto sync_des_lock_callback = _device_cb_factory->getSyncDesLockCallback();
     if (sync_des_lock_callback != nullptr) {
@@ -328,6 +333,12 @@ void DeviceController::channelStartModesModelChangedSlot(const QVector<uint16_t>
 void DeviceController::innerStartWidthModelChangedSlot(quint64 value) {
     if (_device_view != nullptr) {
         _device_view->setInnerStartWidth(value);
+    }
+}
+
+void DeviceController::innerStartEnabledStatusModelChangedSlot(bool value) {
+    if (_device_view != nullptr) {
+        _device_view->setInnerStartEnabledStatus(value);
     }
 }
 

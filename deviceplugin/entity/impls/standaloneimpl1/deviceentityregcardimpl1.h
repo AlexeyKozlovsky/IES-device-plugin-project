@@ -17,7 +17,9 @@ class DeviceEntityRegCardImpl1: public DeviceEntityRegCard {
                                     const std::shared_ptr<DiscreteValueConverter<uint64_t>> &channel_delay_converter,
                                     const std::shared_ptr<DiscreteValueConverter<uint64_t>> &channel_width_converter);
 
-  void setConnectionStatus(bool connection_status) override;
+    GetInnerStartEnabledStatusResponse getInnerStartEnabledStatus(GetInnerStartEnabledStatusRequest request) override;
+
+    void setConnectionStatus(bool connection_status) override;
   bool getConnectionStatus() override;
   ErrorCode connect() override;
 
