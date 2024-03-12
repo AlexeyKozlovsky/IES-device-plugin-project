@@ -41,8 +41,9 @@ class DeviceEntityImpl: public DeviceEntity {
   GetChannelStartModeResponse getChannelsStartMode(GetChannelStartModeRequest request) override;
   GetChannelStartSourceResponse getChannelsStartSource(GetChannelStartSourceRequest request) override;
 
-  SetChannelNameResponse setChannelName(SetChannelNameRequest request) override;
+    GetInnerStartWidthResponse getInnerStartWidth(GetInnerStartWidthRequest request) override;
 
+    SetChannelNameResponse setChannelName(SetChannelNameRequest request) override;
   SetChannelDelayResponse setChannelDelay(SetChannelDelayRequest request) override;
   SetChannelWidthResponse setChannelWidth(SetChannelWidthRequest request) override;
   SetChannelEnabledStatusResponse setChannelEnabledStatus(SetChannelEnabledStatusRequest request) override;

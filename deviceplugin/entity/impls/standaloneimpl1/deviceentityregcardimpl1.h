@@ -20,7 +20,10 @@ class DeviceEntityRegCardImpl1: public DeviceEntityRegCard {
   void setConnectionStatus(bool connection_status) override;
   bool getConnectionStatus() override;
   ErrorCode connect() override;
-  ErrorCode disconnect() override;
+
+    GetInnerStartWidthResponse getInnerStartWidth(GetInnerStartWidthRequest request) override;
+
+    ErrorCode disconnect() override;
 
   GetSyncModuleStatusesResponse getSyncModuleStatuses(GetSyncModuleStatusesRequest request) override;
 

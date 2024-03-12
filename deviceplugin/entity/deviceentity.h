@@ -25,6 +25,7 @@ class DeviceEntityState {
   virtual GetChannelInvertedStatusResponse getChannelsInvertedStatus(GetChannelInvertedStatusRequest request) = 0;
   virtual GetChannelStartModeResponse getChannelsStartMode(GetChannelStartModeRequest request) = 0;
   virtual GetChannelStartSourceResponse getChannelsStartSource(GetChannelStartSourceRequest request) = 0;
+  virtual GetInnerStartWidthResponse getInnerStartWidth(GetInnerStartWidthRequest request) = 0;
 
   virtual SetChannelDelayResponse setChannelDelay(SetChannelDelayRequest request) = 0;
   virtual SetChannelWidthResponse setChannelWidth(SetChannelWidthRequest request) = 0;

@@ -72,3 +72,8 @@ ErrorCode DeviceEntityNotConnectedStateStandaloneImpl1::loadDeviceDTO(const std:
 std::shared_ptr<DeviceEntityDTO> DeviceEntityNotConnectedStateStandaloneImpl1::updateDeviceDTO() {
   return DeviceEntityState::updateDeviceDTO();
 }
+
+GetInnerStartWidthResponse
+DeviceEntityNotConnectedStateStandaloneImpl1::getInnerStartWidth(GetInnerStartWidthRequest request) {
+    return GetInnerStartWidthResponse();
+}

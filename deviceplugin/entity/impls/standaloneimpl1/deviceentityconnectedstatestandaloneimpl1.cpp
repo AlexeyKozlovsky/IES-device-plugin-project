@@ -244,3 +244,14 @@ std::shared_ptr<DeviceEntityDTO> DeviceEntityConnectedStateStandaloneImpl1::upda
   // TODO: Дописать процесс формирования DTO
   return DeviceEntityState::updateDeviceDTO();
 }
+
+GetInnerStartWidthResponse
+DeviceEntityConnectedStateStandaloneImpl1::getInnerStartWidth(GetInnerStartWidthRequest request) {
+    GetInnerStartWidthResponse response;
+
+    if (_reg_card != nullptr) {
+        response = _reg_card->getInnerStartWidth(request);
+    }
+
+    return response;
+}

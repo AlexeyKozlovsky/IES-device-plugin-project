@@ -12,7 +12,9 @@ class DeviceEntityConnectedStateStandaloneImpl1: public DeviceEntityState {
                                                      const std::shared_ptr<DeviceEntityRegCard> &reg_card,
                                                      const std::shared_ptr<DeviceEntityRegCard> &postponed_reg_card);
 
-  GetSyncModuleStatusesResponse getSyncModuleStatuses(GetSyncModuleStatusesRequest request) override;
+    GetInnerStartWidthResponse getInnerStartWidth(GetInnerStartWidthRequest request) override;
+
+    GetSyncModuleStatusesResponse getSyncModuleStatuses(GetSyncModuleStatusesRequest request) override;
   GetSFPParametersResponse getSFPParameters(GetSFPParametersRequest request) override;
   GetChannelWidthResponse getChannelsWidth(GetChannelWidthRequest request) override;
   GetChannelEnabledStatusResponse getChannelsEnabledStatus(GetChannelEnabledStatusRequest request) override;
