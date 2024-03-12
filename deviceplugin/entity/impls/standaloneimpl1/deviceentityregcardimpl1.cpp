@@ -569,7 +569,7 @@ DeviceEntityRegCardImpl1::getInnerStartEnabledStatus(GetInnerStartEnabledStatusR
 
         if (error_code == SUCCESS) {
 
-            uint64_t status = reg_value % 2;
+            uint64_t status = modbus::readByteValue(0, 1, reg_value);
             response.result = status;
         } else {
             // TODO: Потом сделать обработку ошибок.
